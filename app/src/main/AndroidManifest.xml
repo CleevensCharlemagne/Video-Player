@@ -21,7 +21,8 @@
         </activity>
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme.VideoPlayer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
