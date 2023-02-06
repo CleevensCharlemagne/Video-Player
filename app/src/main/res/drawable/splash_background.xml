@@ -6,6 +6,6 @@
         </shape>
     </item>
     <item>
-        <bitmap
+        <bitmap android:src="@mipmap/vpsplash" android:gravity="center"/>
     </item>
 </layer-list>
