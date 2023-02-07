@@ -43,6 +43,6 @@
 
     <Button
         android:layout_width="400dp"
-        android:layout_height=""/>
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>
