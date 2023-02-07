@@ -21,5 +21,6 @@
         android:id="@+id/text1"
         android:layout_width=""
         android:layout_height=""
+        android:layout_below="@+id/allowicon"/>
 
 </RelativeLayout>
