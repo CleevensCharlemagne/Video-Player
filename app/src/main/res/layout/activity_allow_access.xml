@@ -10,7 +10,7 @@
     tools:context=".AllowAccessActivity">
     
     <ImageView
-        android:layout_width=""
+        android:layout_width="170dp"
         android:layout_height=""
 
 </RelativeLayout>
