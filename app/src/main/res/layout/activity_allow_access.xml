@@ -25,6 +25,7 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:text="text"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/allowicon"/>
 
 
