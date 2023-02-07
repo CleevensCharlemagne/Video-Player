@@ -13,6 +13,7 @@
         android:id="@+id/allowicon"
         android:layout_width="170dp"
         android:layout_height="170dp"
+        android:src="@drawable/allowaccess"
         />
 
 </RelativeLayout>
