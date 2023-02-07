@@ -10,7 +10,9 @@
     tools:context=".AllowAccessActivity">
     
     <ImageView
+        android:id="@+id/allowicon"
         android:layout_width="170dp"
         android:layout_height="170dp"
+        />
 
 </RelativeLayout>
