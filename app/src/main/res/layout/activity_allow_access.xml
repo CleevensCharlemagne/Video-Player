@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/allow_color"
+    android:padding="20dp"
     tools:context=".AllowAccessActivity">
 
 </RelativeLayout>
