@@ -35,6 +35,8 @@
         android:layout_height="wrap_content"
         android:text="text2"
         android:textColor="@color/white"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:gravity="center"
+        />
 
 </RelativeLayout>
