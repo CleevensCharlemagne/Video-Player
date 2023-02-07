@@ -43,6 +43,7 @@
 
     <Button
         android:layout_width="400dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Allow access"/>
 
 </RelativeLayout>
