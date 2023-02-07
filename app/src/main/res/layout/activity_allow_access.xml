@@ -41,4 +41,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/text1"/>
 
+    <Button
+        android:layout_width=""
+        android:layout_height=""/>
+
 </RelativeLayout>
