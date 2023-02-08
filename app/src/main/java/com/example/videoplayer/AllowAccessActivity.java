@@ -3,8 +3,11 @@ package com.example.videoplayer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 public class AllowAccessActivity extends AppCompatActivity {
+
+    Button allow_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
