@@ -49,6 +49,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:textAllCaps="true"
+        android:background="#08F2FF"
         android:layout_marginBottom="20dp"
         android:textColor="@color/white"/>
 
