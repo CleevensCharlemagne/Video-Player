@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         // If the user manually navigates to settings and deny the access after granted it.
         if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
 
-            Toast.makeText(this, "Click on permissions and allow storage", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Click on permissions and allow storage", Toast.LENGTH_LONG).show();
 
             //Send user to phone's settings in order to grant or deny the access.
             Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
