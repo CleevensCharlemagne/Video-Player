@@ -6,6 +6,6 @@ public class MediaFiles {
     private String displayName;
     private String size;
     private String duration;
-    private String id;
+    private String path;
     private String id;
 }
