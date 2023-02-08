@@ -6,10 +6,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.SharedPreferencesKt;
 
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -32,6 +34,20 @@ public class AllowAccessActivity extends AppCompatActivity {
         setContentView(R.layout.activity_allow_access);
 
         allow_btn = findViewById(R.id.allow_access);
+
+        SharedPreferences preferences = getSharedPreferences("AllowAccess", MODE_PRIVATE);
+
+        String value = preferences.getString("Allow", "");
+        if (value.equals("OK")) {
+            Intent intent = new Intent(AllowAccessActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString("Allow", "OK");
+            editor.apply();
+        }
+
         allow_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +88,7 @@ public class AllowAccessActivity extends AppCompatActivity {
                                 .setPositiveButton("Open settings", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
+                                        //Send user to phone's settings in order to grant or deny the access.
                                         Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                                         Uri uri = Uri.fromParts("package", getPackageName(), null);
                                         intent.setData(uri);
@@ -91,6 +108,18 @@ public class AllowAccessActivity extends AppCompatActivity {
                     finish();
                 }
             }
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //If user grant the permission in the settings but not in the dialog, after clicking back to the app, drive the to the next activity
+        if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
+            Intent intent = new Intent(AllowAccessActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 }
