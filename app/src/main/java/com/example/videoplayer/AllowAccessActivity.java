@@ -37,6 +37,7 @@ public class AllowAccessActivity extends AppCompatActivity {
 
         SharedPreferences preferences = getSharedPreferences("AllowAccess", MODE_PRIVATE);
 
+        // Give access to the main activity and never show AllowAccessActivity until user denies the permission.
         String value = preferences.getString("Allow", "");
         if (value.equals("OK")) {
             Intent intent = new Intent(AllowAccessActivity.this, MainActivity.class);
