@@ -5,7 +5,7 @@ public class MediaFiles {
     private String title;
     private String displayName;
     private String size;
-    private String id;
+    private String duration;
     private String id;
     private String id;
 }
