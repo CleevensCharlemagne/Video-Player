@@ -20,7 +20,7 @@ public class AllowAccessActivity extends AppCompatActivity {
         allow_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText()
+                Toast.makeText(AllowAccessActivity.this, "Allow Access", Toast.LENGTH_SHORT);
             }
         });
     }
