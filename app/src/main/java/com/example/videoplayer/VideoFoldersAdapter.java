@@ -1,2 +1,4 @@
-package com.example.videoplayer;public class VideoFoldersAdapter {
+package com.example.videoplayer;
+
+public class VideoFoldersAdapter {
 }
