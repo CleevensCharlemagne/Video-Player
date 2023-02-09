@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<MediaFiles> mediaFiles = new ArrayList<>();
     ArrayList<String> allFolderList = new ArrayList<>();
     RecyclerView recyclerView;
-
+    VideoFoldersAdapter adapter;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
