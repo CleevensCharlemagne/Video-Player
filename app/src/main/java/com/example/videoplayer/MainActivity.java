@@ -14,7 +14,11 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+    ArrayList<MediaFiles> mediaFiles = new ArrayList<>();
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
