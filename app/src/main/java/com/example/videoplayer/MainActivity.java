@@ -46,5 +46,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showFolders() {
+        adapter = new VideoFoldersAdapter(mediaFiles, allFolderList, this);
     }
 }
