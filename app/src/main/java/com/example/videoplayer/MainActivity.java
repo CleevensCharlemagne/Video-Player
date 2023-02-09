@@ -4,6 +4,7 @@ import static com.example.videoplayer.AllowAccessActivity.REQUEST_PERMISSION_SET
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.Intent;
@@ -19,6 +20,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<MediaFiles> mediaFiles = new ArrayList<>();
+    ArrayList<String> allFolderList = new ArrayList<>();
+    RecyclerView recyclerView;
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
