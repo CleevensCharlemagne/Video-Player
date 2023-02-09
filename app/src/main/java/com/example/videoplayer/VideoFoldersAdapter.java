@@ -36,6 +36,7 @@ public class VideoFoldersAdapter extends RecyclerView.Adapter<VideoFoldersAdapte
         String nameOfFolder = folderPath.get(position).substring(indexPath + 1);
 
         holder.folderName.setText(nameOfFolder);
+        holder.folderPath.setText(folderPath.get(position));
     }
 
     @Override
