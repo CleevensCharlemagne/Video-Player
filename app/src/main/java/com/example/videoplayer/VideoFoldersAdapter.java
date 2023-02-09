@@ -39,7 +39,12 @@ public class VideoFoldersAdapter extends RecyclerView.Adapter<VideoFoldersAdapte
         holder.folderPath.setText(folderPath.get(position));
         holder.numberOfFiles.setText("5 videos");
 
-        holder.itemView.setOnClickListener();
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     @Override
