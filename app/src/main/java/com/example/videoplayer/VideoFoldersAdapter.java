@@ -52,7 +52,7 @@ public class VideoFoldersAdapter extends RecyclerView.Adapter<VideoFoldersAdapte
 
     @Override
     public int getItemCount() {
-        return 0;
+        return folderPath.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
