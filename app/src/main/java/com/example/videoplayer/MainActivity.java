@@ -42,5 +42,9 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent, REQUEST_PERMISSION_SETTING);
         }
         recyclerView = findViewById(R.id.folders_rv);
+        showFolders();
+    }
+
+    private void showFolders() {
     }
 }
