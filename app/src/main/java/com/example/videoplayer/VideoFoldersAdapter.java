@@ -32,7 +32,7 @@ public class VideoFoldersAdapter extends RecyclerView.Adapter<VideoFoldersAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        int indexPath = folderPath.get(position).lastIndexOf("/");
     }
 
     @Override
