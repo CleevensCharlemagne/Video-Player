@@ -50,5 +50,6 @@ public class MainActivity extends AppCompatActivity {
         adapter = new VideoFoldersAdapter(mediaFiles, allFolderList, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+        adapter.notifyDataSetChanged();
     }
 }
