@@ -43,7 +43,7 @@ public class VideoFoldersAdapter extends RecyclerView.Adapter<VideoFoldersAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, );
+                Intent intent = new Intent(context, VideoFilesActivity.class);
             }
         });
     }
