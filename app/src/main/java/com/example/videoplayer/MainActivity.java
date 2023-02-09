@@ -4,6 +4,7 @@ import static com.example.videoplayer.AllowAccessActivity.REQUEST_PERMISSION_SET
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
@@ -48,5 +49,6 @@ public class MainActivity extends AppCompatActivity {
     private void showFolders() {
         adapter = new VideoFoldersAdapter(mediaFiles, allFolderList, this);
         recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
     }
 }
