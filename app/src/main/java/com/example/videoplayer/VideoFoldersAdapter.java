@@ -44,6 +44,7 @@ public class VideoFoldersAdapter extends RecyclerView.Adapter<VideoFoldersAdapte
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, VideoFilesActivity.class);
+                intent.putExtra("foldername",nameOfFolder);
             }
         });
     }
