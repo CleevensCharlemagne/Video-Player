@@ -1,5 +1,6 @@
 package com.example.videoplayer;
 
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -24,5 +25,8 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+        }
     }
 }
