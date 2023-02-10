@@ -75,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 String dateAdded = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DATE_ADDED));
 
                 MediaFiles mediaFiles = new MediaFiles(id, title, displayName, size, duration, path, dateAdded);
+
+                int index = path.lastIndexOf("/");
+                String subString = path.substring(0, index);
             }while ();
         }
     }
