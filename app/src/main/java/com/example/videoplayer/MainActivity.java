@@ -6,6 +6,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> allFolderList = new ArrayList<>();
     RecyclerView recyclerView;
     VideoFoldersAdapter adapter;
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -46,7 +48,15 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent, REQUEST_PERMISSION_SETTING);
         }
         recyclerView = findViewById(R.id.folders_rv);
+        swipeRefreshLayout = findViewById(R.id.swipe_refresh_folders);
         showFolders();
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                showFolders();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
     }
 
     private void showFolders() {
