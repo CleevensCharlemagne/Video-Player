@@ -2,6 +2,7 @@ package com.example.videoplayer;
 
 import static com.example.videoplayer.AllowAccessActivity.REQUEST_PERMISSION_SETTING;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,6 +19,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -98,5 +101,38 @@ public class MainActivity extends AppCompatActivity {
             }while (cursor.moveToNext());
         }
         return mediaFilesArrayList;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.folder_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.rateus:
+                Uri uri = Uri.parse("https:/play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName());
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                break;
+
+            case R.id.refresh_folders:
+                finish();
+                startActivity(getIntent());
+                break;
+
+            case R.id.share_app:
+                Intent shareIntent = new Intent();
+                shareIntent.setAction(Intent.ACTION_SEND);
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "Check this app via\n" +
+                        "https:/play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName());
+                shareIntent.setType("text/plain");
+                startActivity(Intent.createChooser(shareIntent, "Share app via"));
+                break;
+        }
+        return true;
     }
 }
