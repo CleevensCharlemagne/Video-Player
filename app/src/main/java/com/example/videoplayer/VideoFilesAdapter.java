@@ -14,6 +14,11 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
     private ArrayList<MediaFiles> videoList;
     private Context context;
 
+    public VideoFilesAdapter(ArrayList<MediaFiles> videoList, Context context) {
+        this.videoList = videoList;
+        this.context = context;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
