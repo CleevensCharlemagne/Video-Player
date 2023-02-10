@@ -6,5 +6,9 @@
     android:layout_height="match_parent"
     android:outlineAmbientShadowColor="@android:color/white"
     tools:context=".VideoFilesActivity">
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width=""
+        android:layout_height=""
 
 </RelativeLayout>
