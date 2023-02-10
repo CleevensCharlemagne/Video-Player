@@ -22,7 +22,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
         return 0;
     }
 
-    public class ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
     }
 }
