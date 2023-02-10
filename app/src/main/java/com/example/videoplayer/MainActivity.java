@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -55,9 +57,25 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
+    @SuppressLint("Range")
     public ArrayList<MediaFiles> fetchMedia(){
         ArrayList<MediaFiles> mediaFilesArrayList = new ArrayList<>();
         Uri uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
 
+        Cursor cursor = getContentResolver().query(uri, null,null,null,null);
+
+        if (cursor != null && cursor.moveToNext()){
+            do{
+                String id = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media._ID));
+                String title = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.TITLE));
+                String displayName = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DISPLAY_NAME));
+                String size = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.SIZE));
+                String duration = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DURATION));
+                String path = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DATA));
+                String dateAdded = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DATE_ADDED));
+
+                MediaFiles mediaFiles = new MediaFiles(id, title, displayName, size, duration, path, dateAdded);
+            }while ();
+        }
     }
 }
