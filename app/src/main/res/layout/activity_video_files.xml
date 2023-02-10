@@ -8,6 +8,7 @@
     tools:context=".VideoFilesActivity">
     
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/videos_rv"
         android:layout_width=""
         android:layout_height=""
 
