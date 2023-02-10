@@ -13,6 +13,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.widget.Toast;
 
@@ -47,9 +48,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showFolders() {
+        mediaFiles = fetchMedia();
         adapter = new VideoFoldersAdapter(mediaFiles, allFolderList, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         adapter.notifyDataSetChanged();
+    }
+
+    public ArrayList<MediaFiles> fetchMedia(){
+        ArrayList<MediaFiles> mediaFilesArrayList = new ArrayList<>();
+        Uri uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
+
     }
 }
