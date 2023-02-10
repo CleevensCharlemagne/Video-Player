@@ -78,7 +78,15 @@ public class MainActivity extends AppCompatActivity {
 
                 int index = path.lastIndexOf("/");
                 String subString = path.substring(0, index);
-            }while ();
+
+                if(!allFolderList.contains(subString)){
+                    allFolderList.add(subString);
+                }
+
+                mediaFilesArrayList.add(mediaFiles);
+
+            }while (cursor.moveToNext());
         }
+        return mediaFilesArrayList;
     }
 }
