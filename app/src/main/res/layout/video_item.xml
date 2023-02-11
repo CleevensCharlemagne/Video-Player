@@ -58,7 +58,16 @@
             android:text="4 MB"
             android:textColor="@color/light_dark"/>
 
-
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/video_menu_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackgroundBorderless"
+        android:foregroundTint="@color/light_dark"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_more"/>
 
 </RelativeLayout>
