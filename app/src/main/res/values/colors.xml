@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="allow_color">#22354F</color>
     <color name="allow_botton_color">#08F2FF</color>
+    <color name="light_dark">#74000000</color>
 </resources>
