@@ -7,6 +7,6 @@
     
     <androidx.cardview.widget.CardView
         android:layout_width="112dp"
-        android:layout_height=""
+        android:layout_height="62dp"
 
 </RelativeLayout>
