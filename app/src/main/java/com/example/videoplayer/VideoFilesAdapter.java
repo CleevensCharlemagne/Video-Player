@@ -1,6 +1,7 @@
 package com.example.videoplayer;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -22,8 +23,8 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-
+        View view = LayoutInflater.from(context).inflate(R.layout.video_item, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
