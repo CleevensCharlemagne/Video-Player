@@ -4,5 +4,9 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:background="@drawable/selectable_background">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="112dp"
+        android:layout_height=""
 
 </RelativeLayout>
