@@ -44,6 +44,8 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
         ImageView menu_more;
         TextView videoName;
         TextView tvideoSize;
+        TextView videoDuration;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
         }
