@@ -40,6 +40,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
         ImageView thumbnail;
         ImageView menu_more;
         TextView videoName;
@@ -48,6 +49,8 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            thumbnail = itemView.findViewById(R.id.thumbnail);
         }
     }
 }
