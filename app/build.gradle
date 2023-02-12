@@ -9,6 +9,7 @@ android {
     defaultConfig {
         applicationId "com.example.videoplayer"
         minSdk 16
+        //noinspection ExpiredTargetSdkVersion
         targetSdk 32
         versionCode 1
         versionName "1.0"
