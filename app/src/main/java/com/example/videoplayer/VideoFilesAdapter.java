@@ -52,7 +52,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
 
             thumbnail = itemView.findViewById(R.id.thumbnail);
             menu_more = itemView.findViewById(R.id.video_menu_more);
-            thumbnail = itemView.findViewById(R.id.thumbnail);
+            videoName = itemView.findViewById(R.id.video_name);
             thumbnail = itemView.findViewById(R.id.thumbnail);
             thumbnail = itemView.findViewById(R.id.thumbnail);
         }
