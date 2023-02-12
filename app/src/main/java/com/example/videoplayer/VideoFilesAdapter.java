@@ -12,6 +12,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
+import java.io.File;
 import java.util.ArrayList;
 
 public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.ViewHolder> {
@@ -37,8 +40,12 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
         String size = videoList.get(position).getSize();
         holder.videoSize.setText(android.text.format.Formatter.formatFileSize(context, Long.parseLong(size)));
         //Video duration in milliseconds
-        double videoDurationMS = Double.parseDouble(videoList.get(position).getDuration());
-        holder.videoDuration.setText("5 min");
+        double videoDuration_in_ms = Double.parseDouble(videoList.get(position).getDuration());
+        holder.videoDuration.setText(timeConversion((long) videoDuration_in_ms));
+
+        // Getting the thumbnail
+        Glide.with(context).load(new File(videoList.get(position).getPath())).into(holder.thumbnail);
+
         holder.menu_more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,7 +85,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
         }
     }
     //Convert from millisecond to minute and second
-    public String timeConvertion(long value){
+    public String timeConversion(long value){
         String videoTime;
         int duration = (int) value;
 
