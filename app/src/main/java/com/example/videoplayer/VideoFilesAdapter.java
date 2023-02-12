@@ -54,7 +54,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return 0;
+        return videoList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
