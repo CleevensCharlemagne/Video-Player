@@ -17,17 +17,19 @@ public class VideoFilesActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     private ArrayList<MediaFiles> videoFilesArraylist = new ArrayList<>();
     VideoFilesAdapter videoFilesAdapter;
+    String folder_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_files);
         recyclerView = findViewById(R.id.videos_rv);
+        folder_name = getIntent().getStringExtra("foldername");
         showVideoFiles();
     }
 
     private void showVideoFiles() {
-        videoFilesArraylist = fetchMedia();
+        videoFilesArraylist = fetchMedia(folder_name);
         videoFilesAdapter = new VideoFilesAdapter(videoFilesArraylist, this);
         recyclerView.setAdapter(videoFilesAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
