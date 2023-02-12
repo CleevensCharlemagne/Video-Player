@@ -32,6 +32,8 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.videoName.setText(videoList.get(position).getDisplayName());
+        String size = videoList.get(position).getSize();
+        holder.videoSize.setText(videoList.get(position).getDisplayName());
     }
 
     @Override
