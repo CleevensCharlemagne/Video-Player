@@ -44,7 +44,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
         ImageView thumbnail;
         ImageView menu_more;
         TextView videoName;
-        TextView tvideoSize;
+        TextView videoSize;
         TextView videoDuration;
 
         public ViewHolder(@NonNull View itemView) {
@@ -53,7 +53,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
             thumbnail = itemView.findViewById(R.id.thumbnail);
             menu_more = itemView.findViewById(R.id.video_menu_more);
             videoName = itemView.findViewById(R.id.video_name);
-            thumbnail = itemView.findViewById(R.id.thumbnail);
+            vi = itemView.findViewById(R.id.thumbnail);
             thumbnail = itemView.findViewById(R.id.thumbnail);
         }
     }
