@@ -23,8 +23,10 @@ public class VideoFilesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_files);
-        recyclerView = findViewById(R.id.videos_rv);
         folder_name = getIntent().getStringExtra("foldername");
+        getSupportActionBar().setTitle(folder_name);
+        recyclerView = findViewById(R.id.videos_rv);
+
         showVideoFiles();
     }
 
