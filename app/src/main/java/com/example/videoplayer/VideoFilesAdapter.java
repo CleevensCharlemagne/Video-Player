@@ -40,6 +40,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView thumbnail;
+        ImageView menu_more;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
         }
