@@ -36,6 +36,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
         holder.videoName.setText(videoList.get(position).getDisplayName());
         String size = videoList.get(position).getSize();
         holder.videoSize.setText(android.text.format.Formatter.formatFileSize(context, Long.parseLong(size)));
+        double videoDurationMS = Double.parseDouble(videoList.get(position).getDuration());
         holder.videoDuration.setText("5 min");
         holder.menu_more.setOnClickListener(new View.OnClickListener() {
             @Override
