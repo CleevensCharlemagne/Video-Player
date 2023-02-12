@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,6 +42,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView thumbnail;
         ImageView menu_more;
+        TextView videoName;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
         }
