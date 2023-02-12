@@ -54,7 +54,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
             menu_more = itemView.findViewById(R.id.video_menu_more);
             videoName = itemView.findViewById(R.id.video_name);
             videoSize = itemView.findViewById(R.id.video_size);
-            thumbnail = itemView.findViewById(R.id.thumbnail);
+            videoDuration = itemView.findViewById(R.id.video_duration);
         }
     }
 }
