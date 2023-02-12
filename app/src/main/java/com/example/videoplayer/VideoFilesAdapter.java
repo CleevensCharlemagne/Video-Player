@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,7 +39,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
+        ImageView thumbnail;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
         }
