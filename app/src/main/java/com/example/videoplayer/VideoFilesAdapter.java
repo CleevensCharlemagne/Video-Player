@@ -36,6 +36,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
         holder.videoName.setText(videoList.get(position).getDisplayName());
         String size = videoList.get(position).getSize();
         holder.videoSize.setText(android.text.format.Formatter.formatFileSize(context, Long.parseLong(size)));
+        //Video duration in milliseconds
         double videoDurationMS = Double.parseDouble(videoList.get(position).getDuration());
         holder.videoDuration.setText("5 min");
         holder.menu_more.setOnClickListener(new View.OnClickListener() {
@@ -75,5 +76,21 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
             videoSize = itemView.findViewById(R.id.video_size);
             videoDuration = itemView.findViewById(R.id.video_duration);
         }
+    }
+    //Convert from millisecond to minute and second
+    public String timeConvertion(long value){
+        String videoTime;
+        int duration = (int) value;
+
+        //convert milliseonds to hour
+        int hours = (duration/3600000);
+
+        //convert milliseonds to minutes
+        int minutes = (duration/60000) % 60000;
+
+        //convert milliseonds to seconds
+        int seconds = (duration % 60000) / 60000;
+
+        return " "
     }
 }
