@@ -47,6 +47,7 @@ public class VideoFilesAdapter extends RecyclerView.Adapter<VideoFilesAdapter.Vi
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, VideoPlayerActivity.class);
+                context.startActivity(intent);
             }
         });
     }
