@@ -18,6 +18,7 @@
         app:fastforward_increment="10000"
         app:shutter_background_color="#000000"
         app:use_controller="true"
+        app:controller_layout_id="@layout/custom_playback_view"
 
 
 </RelativeLayout>
