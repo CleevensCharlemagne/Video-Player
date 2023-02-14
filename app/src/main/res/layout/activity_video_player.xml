@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:background="#000000"
         app:hide_on_touch="true"
+        app:resize_mode="fit"
 
 
 </RelativeLayout>
