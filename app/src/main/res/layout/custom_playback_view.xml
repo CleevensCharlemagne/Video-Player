@@ -8,6 +8,10 @@
     <RelativeLayout
         android:id="@+id/root_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></RelativeLayout>
+        android:layout_height="match_parent">
+
+
+
+    </RelativeLayout>
 
 </RelativeLayout>
